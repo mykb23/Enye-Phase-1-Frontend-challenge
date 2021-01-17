@@ -20,6 +20,6 @@ jobs:
       - name: Deploy to GH Pages
         run: |
           git config --global user.email ${{secrets.EMAIL}}
-          git config --global user.name ${{secrets.USERNAME}}
+          git config --global user.name ${{secrets.NAME}}
           git remote set-url origin https://${{secrets.ACCESS_TOKEN}}@github.com/${{secrets.USERNAME}}/Enye-Phase-1-Frontend-challenge.git
           npm run deploy

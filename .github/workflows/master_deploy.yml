@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [14.x]
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -21,5 +21,5 @@ jobs:
         run: |
           git config --global user.email ${{secrets.EMAIL}}
           git config --global user.name ${{secrets.USERNAME}}
-          git remote set-url origin https://${{secrets.ACCESS_TOKEN}}@github.com/${{secrets.EMAIL}}/Enye-Phase-1-Frontend-challenge.git
+          git remote set-url origin https://${{secrets.ACCESS_TOKEN}}@github.com/${{secrets.USERNAME}}/Enye-Phase-1-Frontend-challenge.git
           npm run deploy
